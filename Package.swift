@@ -27,7 +27,13 @@ let package = Package(
         .target(
             name: "SPMImportModule1",
             dependencies: [
-                "SPMImportCore",
+                "SPMImportCore"
+            ]
+        ),
+        .target(
+            name: "SPMImportModule11",
+            dependencies: [
+                "SPMImportModule1",
                 "Align"
             ]
         ),
@@ -40,6 +46,7 @@ let package = Package(
             dependencies: [
                 "SPMImportCore",
                 "SPMImportModule1",
+                "SPMImportModule11",
                 "SPMImportModule2"
             ]
         )
